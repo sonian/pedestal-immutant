@@ -1,0 +1,10 @@
+target/
+tmp/
+logs/
+out/
+.lein-failures
+.cider-history
+.nrepl-history
+.nrepl-port
+.lein-repl-history
+/.descriptors

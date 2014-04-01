@@ -1,0 +1,27 @@
+#!/bin/bash
+
+BASEDIR="$(cd "$(dirname $0)/.." > /dev/null; pwd)"
+
+source $BASEDIR/bin/config.sh
+
+function string_vector {
+    echo "["
+    for arg in "$@"; do
+        echo "\"$arg\""
+    done
+    echo "]"
+}
+
+function is_interactive {
+    if [ -n "$1" ]; then
+        echo $INTERACTIVE_COMMANDS | grep -wq "$1"
+    else
+        return 1
+    fi
+}
+
+if is_interactive "$@"; then
+    cat <(string_vector "$@") - | nc localhost $PORT
+else
+    cat <(string_vector "$@") | nc localhost $PORT
+fi

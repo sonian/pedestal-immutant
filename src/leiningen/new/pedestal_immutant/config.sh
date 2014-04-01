@@ -1,0 +1,4 @@
+#!/bin/sh
+
+PORT=6555
+INTERACTIVE_COMMANDS="repl"
