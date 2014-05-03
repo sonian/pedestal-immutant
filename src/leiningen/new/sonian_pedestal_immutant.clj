@@ -12,18 +12,18 @@
 ;;   See the License for the specific language governing permissions and
 ;;   limitations under the License.
 
-(ns leiningen.new.pedestal-immutant
+(ns leiningen.new.sonian-pedestal-immutant
   (:require [leiningen.new.templates :refer [renderer name-to-path ->files]]
             [leiningen.core.main :as main]))
 
-(def render (renderer "pedestal-immutant"))
+(def render (renderer "sonian-pedestal-immutant"))
 
-(defn pedestal-immutant
+(defn sonian-pedestal-immutant
   "make all the things"
   [name]
   (let [data {:name name
               :sanitized (name-to-path name)}]
-    (main/info "Generating fresh 'lein new' pedestal-immutant project.")
+    (main/info "Generating fresh 'lein new' sonian-pedestal-immutant project.")
     (->files data
              ;; project level things
              [".gitignore" (render "gitignore")]
