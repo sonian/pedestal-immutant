@@ -12,7 +12,7 @@
 ;;   See the License for the specific language governing permissions and
 ;;   limitations under the License.
 
-(defproject sonian-pedestal-immutant/lein-template "0.1.0"
+(defproject sonian-pedestal-immutant/lein-template "0.1.1"
   :description "Leiningen template for a Pedestal project hosted in Immutant"
   :url "http://github.com/sonian/pedestal-immutant"
   :license {:name "Apache 2.0"
