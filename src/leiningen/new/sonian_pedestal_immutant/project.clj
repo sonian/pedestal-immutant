@@ -5,7 +5,7 @@
                  [io.pedestal/pedestal.service "0.2.2"]
                  [io.pedestal/pedestal.service-tools "0.2.2"]
                  ;; immutant
-                 [org.immutant/immutant "1.1.0"
+                 [org.immutant/immutant "1.1.1"
                   :exclusions [javax.servlet/servlet-api]]
                  ;; servlet-api
                  ;; this prevents pedestal and immutant from arguing
